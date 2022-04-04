@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon</title>
+    <link rel="stylesheet" href="static/style/styles.css">
+
+    <audio id="clip1">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+    </audio>
+    <audio id="clip2">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
+    </audio>
+    <audio id="clip3">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
+    </audio>
+    <audio id="clip4">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
+    </audio>
+</head>
+<body>
+    <div id="title">SIMON!</div>
+    <button data-modal-target="#modal" id="info-btn"><i class="fas fa-circle-question"></i></button>
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">Instructions</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <h3>Aim of the game</h3>
+            <p>
+                This game it's supposed to simulate the fizical Simon game.
+            </p>
+            <h3>  How to play the game</h3>
+            <p> You have a power switch where you turn the game on. When you press the power button you will see in count square a black line appears, then you know that the game is on. </p>
+            <p> You have a strict mode means that you have one wrong answer you'll lose all game.With strict mode activated it,s moore chalenging for you to play.  </p>
+            <p> With strict mode off with one wrong answer you can start where you left off. </p>
+            <p>This is a memory matching game so you have to remember the colors of the game in exact order the game have swowed to you.</p>
+            <p> You have 20 rounds till you can finish the game. Good luck everyone!</p>
+        </div>
+    </div>
+    <div id="overlay"></div>
+
+    <div id="switches">
+      <input type="checkbox" class="toggle" id="on">
+      <button class="button" id="start">Start</button>
+      <input type="checkbox" class="toggle" id="strict">
+    </div>
+    <div class="text1">
+      <span>POWER</span><span>STRICT</span>
+    </div>
+    <div id="turn"></div>
+    <div class="text2">
+      COUNT
+    </div>
+    <div class="row">
+        <div class="btn red-btn"></div>
+        <div class="btn green-btn"></div>
+        <div class="btn blue-btn"></div>
+        <div class="btn yellow-btn"></div>
+    </div>
+    <footer id="footer">
+        &copy;Made by Leonard Peltea.
+    </footer>
+    <script src="static/js/script.js"></script> 
+    <script src="https://kit.fontawesome.com/4f73f23e6f.js" crossorigin="anonymous"></script>
+</body>
+</html>

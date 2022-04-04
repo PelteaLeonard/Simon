@@ -1,0 +1,344 @@
+:root {
+    background-color: rgb(0, 0, 0);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#title{
+    font-family: 'Segoe UI';
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+
+#info-btn{
+    display:flex;
+    background: transparent;
+    color: white;
+    border: none;
+    margin: 0 48%;
+    font-size: 30px;
+}
+#info-button:hover{
+    cursor: pointer;
+    transform: none;
+}
+
+p{
+    font-size:15px;
+    padding: 5px;
+    color:black;
+    text-align: left;
+    margin: 0;
+}
+
+h3{
+    font-size:25px;
+    padding: 5px 0;
+    margin: 0;
+    color:black;
+}
+
+.modal{
+    position:absolute;
+    top: -30%;
+    justify-content: center;
+    margin-left: 50%;
+    transform: translate(-50%, 50%) scale(0);
+    transition: 300ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color:white;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active{
+    transform: translate(-50%, 50%) scale(1);
+}
+
+.modal-header{
+    padding:5px 15px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.modal-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.modal-body{
+    padding: 10px 15px;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    transition: 300ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.button{
+    font-size: 20px;
+    font-weight:700;
+    width: 70px;
+    height: 35px;
+    border-radius: 10px;
+    margin:0 30px;
+    text-align: center;
+}
+  
+.text2 {
+    position: absolute;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 48%;
+    margin-top: 40px;
+    color: white;
+    padding-right: 50%;
+  }
+  
+.text1 {
+    position: absolute;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 43%;
+    margin-top:0;
+    color: white;
+  }
+  
+.text1 span:last-child {
+    padding-left: 100px;
+  }
+
+#turn {
+    position: absolute;
+    background: white;
+    color: rgb(130, 119, 119);
+    font-family: courier;
+    font-size: 20px;
+    height: 30px;
+    width: 50px;
+    border-radius: 10px;
+    margin-left: 48%;
+    margin-top: 70px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+  }
+  
+
+.btn{
+    display: inline-block;
+    justify-content: space-around;
+    cursor: pointer;
+    justify-content: space-around;
+    margin-top: 200px;
+}
+
+.btn:hover{
+    box-shadow: inset 0px 0px 0px 2px white;
+    box-sizing: border-box;
+}
+
+.red-btn{
+    border-radius: 50%;
+    background-color: red;
+    width: 120px;
+    height: 120px;
+    margin-right: 50px;
+}
+
+.green-btn{
+    border-radius: 50%;
+    background-color: green;
+    width: 120px;
+    height: 120px;
+    margin-right: 50px;
+}
+
+.blue-btn{
+    border-radius: 50%;
+    background-color: blue;
+    width: 120px;
+    height: 120px;
+    margin-right: 50px;
+}
+
+.yellow-btn{
+    border-radius: 50%;
+    background-color: yellow;
+    width: 120px;
+    height: 120px;
+
+}
+
+#footer{
+    position: fixed;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    width: 100%;
+    height: 30px;
+    margin-top: 6%;
+}
+
+@media  screen and (max-width: 768px) {
+    #footer{
+        font-size: 15px;
+        margin-top: 35%;
+    }
+    #title{
+        font-size: 30px;
+    }
+    #info-btn{
+        font-size: 20px;
+    }
+    p{ 
+        font-size: 10px;
+    }
+    h3{
+        font-size: 15px;
+    }
+    .modal-header .title{
+        font-size: 20px;
+    }
+    #container{
+        margin: 0;
+        justify-content: center;
+    }
+    .btn{
+        padding: 5px 10px;
+    }
+    .modal-body{
+        text-align: center;
+    }
+    .text2{
+        margin-left: 43%;
+    }
+    .text1{
+        margin-left: 25%;
+    }
+    #turn{
+        margin-left: 43%;
+    }
+    .red-btn{
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+    .green-btn{
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+    .blue-btn{
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+    .yellow-btn{
+        width: 50px;
+        height: 50px;
+
+    }
+}
+
+@media screen and (max-height: 500px){
+    #footer{
+        font-size: 15px;
+        margin-top: -13%;
+    }
+    #title{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    #info-btn{
+        font-size: 10px;
+    }
+    p{ 
+        font-size: 10px;
+    }
+    h3{
+        font-size: 10px;
+    }
+    .modal-header .title{
+        font-size: 20px;
+        padding: 0;
+    }
+    #container{
+        margin: 0;
+        justify-content: center;
+
+    }
+    .btn{
+        padding: 5px 10px;
+    }
+    .modal-body{
+        text-align: center;
+    }
+    .text2{
+        margin-left: 46%;
+    }
+    .text1{
+        margin-left: 35%;
+        font-size: 15px;
+    }
+    #turn{
+        margin-left: 46%;
+    }
+    .red-btn{
+        width: 40px;
+        height: 40px;
+        margin: 110px 20px;
+    }
+    .green-btn{
+        width: 40px;
+        height: 40px;
+        margin: 110px 20px;
+    }
+    .blue-btn{
+        width: 40px;
+        height: 40px;
+        margin: 110px 20px;
+    }
+    .yellow-btn{
+        width: 40px;
+        height: 40px;
+        margin: 110px 20px;
+
+    }
+}
